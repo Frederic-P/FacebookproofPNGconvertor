@@ -1,5 +1,5 @@
 # FacebookproofPNGconvertor
-A python script using the Python Image Library to convert and resize JPEGS and PNG files to PNG's with 2048px on the longest side (for sharp results on facebook)
+A python script using the Python Imaging Library to convert and resize JPEGS and PNG files to PNG's with 2048px on the longest side (for sharp results on facebook)
 
 Tool created by FREDERIC PIETOWSKI to quickly convert JPGs to PNG files suitable for facebook sharing
 

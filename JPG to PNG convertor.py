@@ -12,7 +12,7 @@ INSTALL NOTICE:
 import Image
 import os
 
-#Possibel file extensions; script will ignore all other file extensions
+#Possible file extensions; script will ignore all other file extensions
 posex = ["gif", "jpg", "jpeg", "png", "tiff", "dng", "cr2", "nef", "arw"]
 
 

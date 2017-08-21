@@ -11,6 +11,11 @@ INSTALL NOTICE:
 
 import Image
 import os
+
+#Possibel file extensions; script will ignore all other file extensions
+posex = ["gif", "jpg", "jpeg", "png", "tiff", "dng", "cr2", "nef", "arw"]
+
+
 # converting functions (are called on later in the script)
 
 def imageconvertor(infile, savelocation, name):
@@ -54,14 +59,17 @@ for dirpath, dirnames, filenames in os.walk(folder):
             name_of_file = filename.split(".")[0]
             extension = extension.lower()
             fullpath = folder+filename
+            if extension in posex:
 
-            if extension == "jpg" or extension == "jpeg":
-                imageconvertor(fullpath, target, name_of_file)
-            elif extension == "png":
-                imageconvertor(fullpath, target, name_of_file)
+                if extension == "jpg" or extension == "jpeg":
+                    imageconvertor(fullpath, target, name_of_file)
+                elif extension == "png":
+                    imageconvertor(fullpath, target, name_of_file)
+                else:
+                    print "files with a ."+extension+" extension are not supported at this time."
             else:
-                print "files with a ."+extension+" extension are not supported at this time."
-                succeedded = succeedded+1
+                pass #what to do if not an imagefile? ==> Do nothing.
+
         except:
             pass #To ignore newly created files.
             #print "Couldn't handle file: "+fullpath
